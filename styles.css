@@ -110,7 +110,6 @@ footer {
     margin-top: 2em;
 }
 
-/* Retain the .sr-only class as provided in the assignment */
 .sr-only {
     border: 0;
     clip: rect(0, 0, 0, 0);
@@ -131,13 +130,12 @@ table {
 }
 
 th, td {
-    border: 1px solid #ccc; /* You can change the color and width */
-    padding: 8px;
+    border: 1px solid #ccc; 
     text-align: left;
 }
 
 th {
-    background-color: #f2f2f2; /* Add background to the headers */
+    background-color: #f2f2f2; 
 }
 
 caption {
