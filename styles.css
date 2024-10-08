@@ -24,7 +24,6 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-size: 2.5em;
     margin-bottom: 0.5em;
-    
 }
 
 h2 {
@@ -48,7 +47,6 @@ header h1 {
     color: #F5F5F5;
     margin: 0;
     padding: 0 20px;
-    text-align: center;
 }
 
 /* Navigation styles */
@@ -70,7 +68,7 @@ nav ul li {
 }
 
 nav a {
-    color: #000000;
+    color: #1C3F60;
     text-decoration: none;
     font-weight: 600;
 }
@@ -93,12 +91,41 @@ figure {
 figure img {
     max-width: 100%;
     height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
 }
 
 figcaption {
     font-style: italic;
     color: #666;
     margin-top: 0.5em;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #1C3F60;
+    color: #F5F5F5;
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 0.5em;
 }
 
 /* Footer styles */
@@ -110,36 +137,28 @@ footer {
     margin-top: 2em;
 }
 
+/* Accessibility class */
 .sr-only {
-    border: 0;
-    clip: rect(0, 0, 0, 0);
+    position: absolute;
+    width: 1px;
     height: 1px;
+    padding: 0;
     margin: -1px;
     overflow: hidden;
-    padding: 0;
-    position: absolute;
+    clip: rect(0, 0, 0, 0);
     white-space: nowrap;
-    width: 1px;
+    border: 0;
 }
 
-/* Table styling */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-}
+/* Responsive image layout */
+@media (min-width: 768px) {
+    .image-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 
-th, td {
-    border: 1px solid #ccc; 
-    text-align: left;
-}
-
-th {
-    background-color: #f2f2f2; 
-}
-
-caption {
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-align: left;
+    .image-gallery figure {
+        flex-basis: calc(50% - 10px);
+    }
 }
