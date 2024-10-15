@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Accessibility Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="2styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header>
+        <h1>Web Accessibility Guide</h1>
+        <nav>
+            <h2>Main Navigation</h2>
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#principles">Principles</a></li>
+                <li><a href="#techniques">Techniques</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <article>
+            <h2>Understanding Web Accessibility</h2>
+            
+            <section id="introduction">
+                <h3>Introduction</h3>
+                <p>Web accessibility ensures that people with disabilities can perceive, understand, navigate, and interact with websites and tools. It also benefits people without disabilities, such as older people with changing abilities.</p>
+            </section>
+
+            <section id="principles">
+                <h3>Principles of Web Accessibility</h3>
+                <p>The Web Content Accessibility Guidelines (WCAG) are organized around four principles, often referred to as POUR:</p>
+                <ul>
+                    <li><strong>Perceivable</strong>: Information and user interface components must be presentable to users in ways they can perceive.</li>
+                    <li><strong>Operable</strong>: User interface components and navigation must be operable.</li>
+                    <li><strong>Understandable</strong>: Information and the operation of user interface must be understandable.</li>
+                    <li><strong>Robust</strong>: Content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies.</li>
+                </ul>
+            </section>
+
+            <section id="techniques">
+                <h3>Accessibility Techniques</h3>
+                <table>
+                    <caption>Common Accessibility Techniques</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Technique</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Alternative Text</th>
+                            <td>Provide text alternatives for non-text content</td>
+                            <td><code>&lt;img src="logo.png" alt="Company Logo"&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Keyboard Navigation</th>
+                            <td>Ensure all functionality is available from a keyboard</td>
+                            <td>Use <code>tabindex</code> attribute</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Color Contrast</th>
+                            <td>Ensure sufficient contrast between text and background</td>
+                            <td>Use contrast ratio of at least 4.5:1 for normal text</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="resources">
+                <h3>Resources</h3>
+                <p>Here are some valuable resources for learning more about web accessibility:</p>
+                <ul>
+                    <li><a href="https://www.w3.org/WAI/">W3C Web Accessibility Initiative (WAI)</a></li>
+                    <li><a href="https://webaim.org/">WebAIM</a></li>
+                    <li><a href="https://www.a11yproject.com/">The A11Y Project</a></li>
+                </ul>
+            </section>
+
+            <section id="feedback">
+                <h3>Feedback Form</h3>
+                <form action="/submit-feedback" method="post">
+                    <fieldset>
+                        <legend>Your Feedback</legend>
+                        
+                        <div>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div>
+                            <label for="feedback">Your feedback:</label>
+                            <textarea id="feedback" name="feedback" rows="4" required></textarea>
+                        </div>
+                        
+                        <div>
+                            <fieldset>
+                                <legend>Rate your understanding of web accessibility:</legend>
+                                <div>
+                                    <input type="radio" id="beginner" name="understanding" value="beginner">
+                                    <label for="beginner">Beginner</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="intermediate" name="understanding" value="intermediate">
+                                    <label for="intermediate">Intermediate</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="advanced" name="understanding" value="advanced">
+                                    <label for="advanced">Advanced</label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        
+                        <div>
+                            <button type="submit">Submit Feedback</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Web Accessibility Guide. All rights reserved.</p>
+        <p>
+            <span class="material-icons" aria-hidden="true">accessibility</span>
+            Committed to accessibility
+        </p>
+    </footer>
+</body>
+</html>
