@@ -14,7 +14,6 @@
     <header>
         <h1>Web Accessibility Guide</h1>
         <nav>
-            <h2>Main Navigation</h2>
             <ul>
                 <li><a href="#introduction">Introduction</a></li>
                 <li><a href="#principles">Principles</a></li>
@@ -92,26 +91,22 @@
                     <fieldset>
                         <legend>Your Feedback</legend>
                         
-                        <!-- Name Field -->
                         <div>
                             <label for="name">Name:</label>
                             <input type="text" id="name" name="name" aria-label="Full name" required>
                         </div>
                         
-                        <!-- Email Field with additional help text -->
                         <div>
                             <label for="email">Email:</label>
                             <input type="email" id="email" name="email" aria-describedby="emailHelp" required>
                             <p id="emailHelp">We will not share your email with anyone.</p>
                         </div>
                         
-                        <!-- Feedback Textarea -->
                         <div>
                             <label for="feedback">Your feedback:</label>
                             <textarea id="feedback" name="feedback" rows="4" aria-label="Your feedback about the website" required></textarea>
                         </div>
                         
-                        <!-- Radio Buttons Grouped in a Fieldset -->
                         <div>
                             <fieldset>
                                 <legend>Rate your understanding of web accessibility:</legend>
@@ -130,7 +125,6 @@
                             </fieldset>
                         </div>
                         
-                        <!-- Submit Button -->
                         <div>
                             <button type="submit" aria-label="Submit your feedback">Submit Feedback</button>
                         </div>
