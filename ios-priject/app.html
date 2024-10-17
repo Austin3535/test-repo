@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management App</title>
+    <link rel="stylesheet" href="appstyles.css">
+    <link href='https://unpkg.com/fullcalendar@5.10.1/main.min.css' rel='stylesheet' />
+</head>
+<body>
+    <header>
+        <h1>Task Management</h1>
+    </header>
+    <main>
+        <section id="task-input">
+            <h2>To-Do List</h2>
+            <form id="task-form">
+                <input type="text" id="task-name" placeholder="Enter task name" required>
+                <input type="number" id="task-duration" placeholder="Duration (hours)" required>
+                <button type="submit">Add Task</button>
+            </form>
+            <ul id="task-list"></ul>
+            <button id="schedule-tasks">Schedule Tasks</button>
+            <div id="calendar"></div>
+        </section>
+        <section id="daily-notifications">
+            <h2>Daily Notifications</h2>
+            <p id="morning-reminder">Good morning! Here are your tasks for today:</p>
+            <p id="end-of-day-report">End of day report:</p>
+        </section>
+        <section id="motivational-insights">
+            <h2>Motivational Insights</h2>
+            <p id="daily-report">Daily Report:</p>
+            <p id="weekly-report">Weekly Report:</p>
+        </section>
+    </main>
+    <script src='https://unpkg.com/fullcalendar@5.10.1/main.min.js'></script>
+    <script src="appscript.js"></script>
+</body>
+</html>
