@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans:wght@400;700&family=Inter:wght@400;700&display=swap');
+
+/* Base styles */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #FFB25B;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Inclusive Sans', sans-serif;
+  font-weight: normal;
+  padding: .2em 0;
+}
+
+p {
+  margin: 1.8em 0;
+  line-height: 1.8em;
+}
+
+h2 { font-size: 1.25em; }
+
+header,
+nav,
+main,
+aside,
+footer {
+  padding: 1.5em;
+  border: 1px black solid;
+}
+
+header,
+footer {
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #95F5BC;
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas:
+    "heady heady heady"
+    "navvy navvy navvy"
+    "aside1 mainy aside2"
+    "aside1 mainy aside2"
+    "aside1 mainy aside2"
+    "footy footy footy";
+}
+
+header { grid-area: heady; background: #FFB25B; }
+nav { grid-area: navvy; background: #95F5BC; }
+main { grid-area: mainy; background: #40C2FF; max-height: 100%; }
+#aside1 { grid-area: aside1; background: #F54DD1; }
+#aside2 { grid-area: aside2; background: #618BD5; }
+footer { grid-area: footy; background: rgb(171, 171, 171); }
+
+nav ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+@media screen and (min-width: 641px) and (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "heady heady"
+      "navvy navvy"
+      "mainy mainy"
+      "aside1 aside2"
+      "footy footy";
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "heady"
+      "mainy"
+      "aside1"
+      "aside2"
+      "navvy"
+      "footy";
+  }
+  nav ul {
+    flex-flow: column nowrap;
+    text-align: center;
+  }
+  nav ul li a {
+    display: block;
+    padding: 10px 5px;
+    margin: 5px;
+    border: 1px black solid;
+    background: white;
+  }
+}
