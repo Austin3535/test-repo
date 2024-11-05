@@ -5,14 +5,14 @@ body {
     color: #333333;
     background-color: #F5F5F5;
     margin: 0;
-    padding: 20px; /* Adds padding around the whole body */
+    padding: 20px;
 }
 
 /* Wrapper for content width control */
 .wrapper {
     max-width: 800px;
     margin: 0 auto;
-    padding: 0 20px; /* Adds padding inside the wrapper */
+    padding: 0 20px;
 }
 
 /* Typography */
@@ -48,9 +48,10 @@ header h1 {
     margin: 0;
     padding: 0 20px;
 }
+
 /* Navigation styles */
 nav {
-    background-color: #f5f5f5; /* Light background color */
+    background-color: #f5f5f5;
     padding: 0.5em 0;
 }
 
@@ -67,13 +68,13 @@ nav ul li {
 }
 
 nav a {
-    color: #1C3F60; /* Dark text color */
+    color: #1C3F60;
     text-decoration: none;
     font-weight: 600;
 }
 
 nav a:hover {
-    color: #FFA500; /* Orange hover color */
+    color: #FFA500;
 }
 
 /* Main content styles */
@@ -82,7 +83,7 @@ main {
     background-color: #ffffff;
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px; /* Adds padding inside the main content */
+    padding: 20px;
 }
 
 /* Table styles */
