@@ -203,6 +203,12 @@ footer {
 }
 
 /* Responsive image layout */
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    width: 300px; /* Default width */
+}
+
 @media (min-width: 768px) {
     .image-gallery {
         display: flex;
@@ -212,5 +218,10 @@ footer {
 
     .image-gallery figure {
         flex-basis: calc(50% - 10px);
+    }
+
+    .responsive-img {
+        max-width: 100%;
+        height: auto;
     }
 }
