@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Implement Universal Design - Educational Guide</title>
+    <link rel="stylesheet" href="finalstyles2.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div class="wrapper">
+        <header role="banner">
+            <h1>How to Implement Universal Design</h1>
+            <nav role="navigation" aria-label="Main navigation">
+                <ul>
+                    <li><a href="final.html">Home</a></li>
+                    <li><a href="why.html">Why Universal Design</a></li>
+                    <li><a href="what.html">What is Universal Design</a></li>
+                    <li><a href="how.html" aria-current="page">How to Implement</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main-content" role="main">
+            <nav class="toc" aria-labelledby="toc-heading">
+                <h2 id="toc-heading">Quick Navigation</h2>
+                <ul>
+                    <li><a href="#pour">WCAG 2.0 POUR Principles</a></li>
+                    <li><a href="#semantic">Semantic HTML Implementation</a></li>
+                    <li><a href="#aria">ARIA Implementation Rules</a></li>
+                    <li><a href="#css">CSS Layout Techniques</a></li>
+                    <li><a href="#accessibility-implementation">Implementation Guide</a></li>
+                </ul>
+            </nav>
+
+            <section id="pour" class="principles">
+                <h2>WCAG 2.0 POUR Principles in Detail</h2>
+                <div class="card-container">
+                    <article class="card">
+                        <h3>Perceivable</h3>
+                        <ul>
+                            <li>
+                                <strong>Text Alternatives:</strong>
+                                <code>&lt;img alt="Description of image"&gt;</code>
+                            </li>
+                            <li>
+                                <strong>Multimedia Captions:</strong>
+                                <code>&lt;track kind="captions" src="captions.vtt"&gt;</code>
+                            </li>
+                            <li>
+                                <strong>Adaptable Content:</strong>
+                                Use responsive design and relative units
+                            </li>
+                            <li>
+                                <strong>Contrast Ratio:</strong>
+                                Minimum 4.5:1 for normal text
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <h3>Operable</h3>
+                        <ul>
+                            <li>
+                                <strong>Keyboard Access:</strong>
+                                <code>tabindex="0"</code> for custom controls
+                            </li>
+                            <li>
+                                <strong>Timing:</strong>
+                                Provide pause/stop controls
+                            </li>
+                            <li>
+                                <strong>Seizure Prevention:</strong>
+                                No content flashing more than 3 times/second
+                            </li>
+                            <li>
+                                <strong>Navigation:</strong>
+                                Clear headings and landmarks
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <h3>Understandable</h3>
+                        <ul>
+                            <li>
+                                <strong>Readable Text:</strong>
+                                Use clear fonts and proper spacing
+                            </li>
+                            <li>
+                                <strong>Predictable:</strong>
+                                Consistent navigation and functionality
+                            </li>
+                            <li>
+                                <strong>Input Assistance:</strong>
+                                Clear labels and error messages
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <h3>Robust</h3>
+                        <ul>
+                            <li>
+                                <strong>Compatibility:</strong>
+                                Valid HTML and ARIA usage
+                            </li>
+                            <li>
+                                <strong>Future-proof:</strong>
+                                Follow web standards
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section id="semantic" class="semantic">
+                <h2>Semantic HTML Implementation</h2>
+                <div class="card-container">
+                    <article class="card">
+                        <h3>Document Structure</h3>
+                        <pre><code>&lt;header role="banner"&gt;
+    &lt;h1&gt;Page Title&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;nav role="navigation"&gt;
+    &lt;!-- Navigation content --&gt;
+&lt;/nav&gt;
+
+&lt;main role="main"&gt;
+    &lt;section&gt;
+        &lt;h2&gt;Section Title&lt;/h2&gt;
+        &lt;article&gt;
+            &lt;h3&gt;Article Title&lt;/h3&gt;
+        &lt;/article&gt;
+    &lt;/section&gt;
+    
+    &lt;aside&gt;
+        &lt;h2&gt;Related Content&lt;/h2&gt;
+    &lt;/aside&gt;
+&lt;/main&gt;
+
+&lt;footer role="contentinfo"&gt;
+    &lt;!-- Footer content --&gt;
+&lt;/footer&gt;</code></pre>
+                    </article>
+
+                    <article class="card">
+                        <h3>Heading Hierarchy</h3>
+                        <ul>
+                            <li><code>&lt;h1&gt;</code> - Main page title</li>
+                            <li><code>&lt;h2&gt;</code> - Major sections</li>
+                            <li><code>&lt;h3&gt;</code> - Subsections</li>
+                            <li><code>&lt;h4&gt;</code> - Sub-subsections</li>
+                            <li>Never skip heading levels</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section id="aria" class="aria">
+                <h2>ARIA Implementation Rules</h2>
+                <div class="card-container">
+                    <article class="card">
+                        <h3>Best Practices</h3>
+                        <ul>
+                            <li>Use native HTML elements when possible</li>
+                            <li>Only add ARIA when HTML semantics aren't sufficient</li>
+                            <li>Ensure all interactive elements are keyboard-accessible</li>
+                            <li>Always provide accessible names for interactive elements</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <h3>Example Implementation</h3>
+                        <pre><code>&lt;!-- Good: Native button --&gt;
+&lt;button type="button"&gt;Click Me&lt;/button&gt;
+
+&lt;!-- Avoid: DIV as button --&gt;
+&lt;div role="button" 
+     tabindex="0" 
+     onclick="handleClick()"
+     onkeydown="handleKeydown()"&gt;
+    Click Me
+&lt;/div&gt;</code></pre>
+                    </article>
+                </div>
+            </section>
+
+            <section id="css" class="css">
+                <h2>CSS Layout Techniques</h2>
+                <div class="card-container">
+                    <article class="card">
+                        <h3>Grid Layout</h3>
+                        <pre><code>.page-layout {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "nav main"
+        "footer footer";
+    gap: 1rem;
+}</code></pre>
+                    </article>
+
+                    <article class="card">
+                        <h3>Flexbox Components</h3>
+                        <pre><code>.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.card {
+    flex: 1 1 300px;
+}</code></pre>
+                    </article>
+
+                    <article class="card">
+                        <h3>Mobile-First Design</h3>
+                        <pre><code>/* Base mobile styles */
+.container {
+    width: 100%;
+    padding: 1rem;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+    .container {
+        max-width: 750px;
+        margin: 0 auto;
+    }
+}</code></pre>
+                    </article>
+                </div>
+            </section>
+
+            <section id="accessibility-implementation" class="accessibility">
+                <h2>Creating an Accessible Website: Implementation Guide</h2>
+                <div class="card-container">
+                    <article class="card">
+                        <h3>Accessible Forms</h3>
+                        <div class="example-code">
+                            <h4>Best Practice Example:</h4>
+                            <pre><code>&lt;form role="form" aria-label="Contact Form"&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label for="name" id="name-label"&gt;
+            Name
+            &lt;span class="required" aria-hidden="true"&gt;*&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;input 
+            type="text" 
+            id="name" 
+            name="name" 
+            required 
+            aria-required="true"
+            aria-describedby="name-help"&gt;
+        &lt;span id="name-help" class="help-text"&gt;
+            Enter your full name
+        &lt;/span&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <h3>Image Accessibility</h3>
+                        <ul>
+                            <li>
+                                <strong>Informative Images:</strong>
+                                <code>&lt;img src="chart.png" alt="Sales chart showing 50% increase in Q4"&gt;</code>
+                            </li>
+                            <li>
+                                <strong>Decorative Images:</strong>
+                                <code>&lt;img src="divider.png" alt="" role="presentation"&gt;</code>
+                            </li>
+                            <li>
+                                <strong>Complex Images:</strong>
+                                <code>&lt;figure&gt;
+    &lt;img src="data.png" alt="Quarterly sales data"&gt;
+    &lt;figcaption&gt;Detailed description of the data visualization&lt;/figcaption&gt;
+&lt;/figure&gt;</code>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <h3>Focus Management</h3>
+                        <pre><code>/* Visible focus indicators */
+:focus {
+    outline: 3px solid #4A90E2;
+    outline-offset: 2px;
+}
+
+/* Skip Link Implementation */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    padding: 8px;
+    background: #4A90E2;
+    color: white;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}</code></pre>
+                    </article>
+
+                    <article class="card">
+                        <h3>Color and Contrast Guidelines</h3>
+                        <ul>
+                            <li>Normal text: 4.5:1 contrast ratio</li>
+                            <li>Large text (18pt+): 3:1 contrast ratio</li>
+                            <li>Don't rely on color alone for information</li>
+                            <li>Provide patterns or icons with colors</li>
+                        </ul>
+                        <div class="color-example">
+                            <div class="good-example">
+                                <span class="status-icon">✓</span>                                <span class="status-text">Success</span>
+                            </div>
+                            <div class="bad-example">
+                                <span class="status-icon">⨉</span>
+                                <span class="status-text">Error</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <h3>Dynamic Content Updates</h3>
+                        <pre><code>&lt;div role="alert" aria-live="polite"&gt;
+    &lt;!-- Dynamic content here --&gt;
+&lt;/div&gt;
+
+&lt;button 
+    aria-expanded="false"
+    aria-controls="menu-content"&gt;
+    Toggle Menu
+&lt;/button&gt;</code></pre>
+                    </article>
+
+                    <article class="card">
+                        <h3>Accessibility Testing Checklist</h3>
+                        <ul>
+                            <li>✓ Test with keyboard navigation</li>
+                            <li>✓ Verify with screen readers
+                                <ul>
+                                    <li>NVDA (Windows)</li>
+                                    <li>VoiceOver (Mac)</li>
+                                    <li>JAWS (Windows)</li>
+                                </ul>
+                            </li>
+                            <li>✓ Check color contrast
+                                <ul>
+                                    <li>WebAIM Contrast Checker</li>
+                                    <li>Chrome DevTools</li>
+                                </ul>
+                            </li>
+                            <li>✓ Validate HTML structure</li>
+                            <li>✓ Test responsive behavior</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <h3>Accessible Interactive Patterns</h3>
+                        <pre><code>&lt;!-- Modal Dialog --&gt;
+&lt;dialog 
+    role="dialog"
+    aria-labelledby="dialog-title"
+    aria-describedby="dialog-desc"&gt;
+    &lt;h2 id="dialog-title"&gt;Dialog Title&lt;/h2&gt;
+    &lt;p id="dialog-desc"&gt;Description here&lt;/p&gt;
+    &lt;button autofocus&gt;Close&lt;/button&gt;
+&lt;/dialog&gt;
+
+&lt;!-- Dropdown Menu --&gt;
+&lt;div class="dropdown"&gt;
+    &lt;button 
+        aria-haspopup="true"
+        aria-expanded="false"&gt;
+        Menu
+    &lt;/button&gt;
+    &lt;ul role="menu"&gt;
+        &lt;li role="menuitem"&gt;Option 1&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer role="contentinfo">
+            <p>&copy; 2024 Austin Emfield. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
