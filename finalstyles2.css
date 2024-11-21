@@ -1,3 +1,4 @@
+
 /* Base styles - Mobile First */
 body {
     font-family: 'Open Sans', sans-serif;
@@ -221,4 +222,56 @@ textarea {
 
 .toc a:hover {
     text-decoration: underline;
+}
+
+/* Interactive Demo Styles */
+.demo-container {
+    display: grid;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+@media (min-width: 768px) {
+    .demo-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.demo-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.size-button {
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    border: 1px solid #1C3F60;
+    background: white;
+    color: #1C3F60;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.demo-text {
+    margin-top: 1rem;
+    font-size: 16px;
+}
+
+/* Contrast Demo */
+.contrast-demo div {
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 4px;
+}
+
+.good-contrast {
+    background: #1C3F60;
+    color: #ffffff;
+}
+
+.poor-contrast {
+    background: #cccccc;
+    color: #999999;
 }
