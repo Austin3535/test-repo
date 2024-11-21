@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Universal Design - Educational Guide</title>
+    <link rel="stylesheet" href="finalstyles2.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div class="wrapper">
+        <header role="banner">
+            <h1>What is Universal Design?</h1>
+            <nav role="navigation" aria-label="Main navigation">
+                <ul>
+                    <li><a href="final.html">Home</a></li>
+                    <li><a href="why.html">Why Universal Design</a></li>
+                    <li><a href="what.html" aria-current="page">What is Universal Design</a></li>
+                    <li><a href="how.html">How to Implement</a></li>
+                </ul>
+            </nav>
+        </header>
+
+<!-- Previous header content remains the same -->
+
+<main id="main-content" role="main">
+    <!-- Add this Table of Contents section -->
+<nav class="toc" aria-labelledby="toc-heading">
+    <h2 id="toc-heading">Quick Navigation</h2>
+    <ul>
+        <li><a href="#design-concepts">Norman's Design Concepts</a></li>
+        <li><a href="#typography">Typography Best Practices</a></li>
+        <li><a href="#color-design">Color Design Requirements</a></li>
+        <li><a href="#testing">Testing Methodology</a></li>
+    </ul>
+</nav>
+    <section class="design-concepts">
+        <h2>Norman's Design Concepts in Detail</h2>
+        <div class="card-container">
+            <article class="card">
+                <h3>Affordance</h3>
+                <p>Affordance refers to the perceived and actual properties of an object that suggest how it should be used. For example:</p>
+                <ul>
+                    <li>Buttons with a raised appearance suggest they can be pressed</li>
+                    <li>Underlined text suggests it's clickable</li>
+                    <li>A slider control suggests it can be dragged</li>
+                    <li>Input fields with a white background suggest they can be typed in</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h3>Constraints</h3>
+                <p>Constraints are design elements that limit possible actions to prevent errors and guide users. Examples include:</p>
+                <ul>
+                    <li>Graying out unavailable options in a menu</li>
+                    <li>Date pickers that prevent invalid date selections</li>
+                    <li>Character limits on input fields</li>
+                    <li>Form validation that prevents submission of incorrect data</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h3>Feedback</h3>
+                <p>Feedback provides immediate response to user actions, confirming their interaction. Common implementations:</p>
+                <ul>
+                    <li>Button color changes when clicked</li>
+                    <li>Success messages after form submission</li>
+                    <li>Error messages when something goes wrong</li>
+                    <li>Loading indicators during processes</li>
+                    <li>Sound effects for important notifications</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h3>Visibility</h3>
+                <p>Visibility ensures users can easily find and understand available functions. Key aspects include:</p>
+                <ul>
+                    <li>Clear navigation menus</li>
+                    <li>Obvious call-to-action buttons</li>
+                    <li>Important information displayed prominently</li>
+                    <li>Status indicators (e.g., progress bars)</li>
+                    <li>Clear hierarchy of information</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h3>Mapping</h3>
+                <p>Mapping creates natural relationships between controls and their effects. Examples include:</p>
+                <ul>
+                    <li>Volume slider that moves up for higher volume</li>
+                    <li>Left/right arrows for previous/next navigation</li>
+                    <li>Spatial layout matching real-world relationships</li>
+                    <li>Icons that visually represent their function</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+<!-- Norman's Design Concepts section remains the same -->
+
+<section class="typography">
+    <h2>Typography Best Practices</h2>
+    <div class="card-container">
+        <article class="card">
+            <h3>Text Contrast</h3>
+            <p>Ensuring readability through proper contrast:</p>
+            <ul>
+                <li>Dark text (#333333) on light backgrounds</li>
+                <li>Avoid pure black on pure white</li>
+                <li>Test contrast with accessibility tools</li>
+                <li>Maintain contrast in all color schemes</li>
+            </ul>
+        </article>
+
+        <article class="card">
+            <h3>Line Specifications</h3>
+            <p>Optimal spacing and lengths:</p>
+            <ul>
+                <li>Line height: 1.5 to 1.6 times font size</li>
+                <li>Ideal line length: 50-75 characters</li>
+                <li>Paragraph spacing: 1.5em</li>
+                <li>Margins prevent text touching edges</li>
+            </ul>
+        </article>
+
+        <article class="card">
+            <h3>Font Selection</h3>
+            <p>Choosing the right fonts:</p>
+            <ul>
+                <li>Sans-serif for body text (Open Sans, Roboto)</li>
+                <li>Serif for headings (Merriweather, Georgia)</li>
+                <li>Maximum 2-3 font families per design</li>
+                <li>Include web-safe font fallbacks</li>
+            </ul>
+        </article>
+
+        <article class="card">
+            <h3>Size Guidelines</h3>
+            <p>Maintaining readable sizes:</p>
+            <ul>
+                <li>Body text: minimum 16px</li>
+                <li>Mobile text: minimum 18px</li>
+                <li>Headings: 20% larger than body minimum</li>
+                <li>Consistent size hierarchy</li>
+            </ul>
+        </article>
+    </div>
+</section>
+
+<section class="color-design">
+    <h2>Color Design Requirements</h2>
+    <div class="card-container">
+        <article class="card">
+            <h3>Normal Text Contrast</h3>
+            <p>WCAG 2.1 requirements for standard text:</p>
+            <ul>
+                <li>4.5:1 minimum contrast ratio</li>
+                <li>Applies to text under 18pt</li>
+                <li>Includes form inputs</li>
+                <li>Use contrast checker tools</li>
+            </ul>
+        </article>
+
+        <article class="card">
+            <h3>Large Text Contrast</h3>
+            <p>Requirements for larger text elements:</p>
+            <ul>
+                <li>3:1 minimum contrast ratio</li>
+                <li>Applies to text over 18pt</li>
+                <li>Or 14pt if bold</li>
+                <li>Includes large navigation items</li>
+            </ul>
+        </article>
+
+        <article class="card">
+            <h3>Color Blindness</h3>
+            <p>Ensuring color-blind accessibility:</p>
+            <ul>
+                <li>Use colorblind-safe palettes</li>
+                <li>Avoid red/green combinations</li>
+                <li>Test with color blindness simulators</li>
+                <li>Consider monochrome users</li>
+            </ul>
+        </article>
+
+        <article class="card">
+            <h3>Information Conveying</h3>
+            <p>Multiple ways to convey information:</p>
+            <ul>
+                <li>Never rely on color alone</li>
+                <li>Add icons or patterns</li>
+                <li>Include text labels</li>
+                <li>Provide alternative indicators</li>
+            </ul>
+        </article>
+    </div>
+</section>
+
+<section class="testing">
+    <h2>Testing Methodology</h2>
+    <div class="card-container">
+        <article class="card">
+            <h3>HTML Validation</h3>
+            <p>Using W3C HTML Validator:</p>
+            <ul>
+                <li>Check document structure</li>
+                <li>Verify required attributes</li>
+                <li>Ensure proper nesting</li>
+                <li>Validate semantic markup</li>
+            </ul>
+        </article>
+
+        <article class="card">
+            <h3>CSS Validation</h3>
+            <p>Style sheet verification:</p>
+            <ul>
+                <li>Check syntax validity</li>
+                <li>Verify browser compatibility</li>
+                <li>Identify unused styles</li>
+                <li>Validate media queries</li>
+            </ul>
+        </article>
+
+        <article class="card">
+            <h3>WAVE Testing</h3>
+            <p>Accessibility evaluation:</p>
+            <ul>
+                <li>Check contrast ratios</li>
+                <li>Verify alt text presence</li>
+                <li>Review ARIA usage</li>
+                <li>Identify structural issues</li>
+            </ul>
+        </article>
+
+        <article class="card">
+            <h3>Lighthouse Audits</h3>
+            <p>Performance and accessibility checks:</p>
+            <ul>
+                <li>Run performance tests</li>
+                <li>Check accessibility scores</li>
+                <li>Review best practices</li>
+                <li>Verify SEO optimization</li>
+            </ul>
+        </article>
+
+        <article class="card">
+            <h3>Screen Readers</h3>
+            <p>Testing with multiple tools:</p>
+            <ul>
+                <li>JAWS for Windows testing</li>
+                <li>VoiceOver for Mac testing</li>
+                <li>NVDA for free testing</li>
+                <li>Check reading order</li>
+            </ul>
+        </article>
+
+        <article class="card">
+            <h3>Keyboard Navigation</h3>
+            <p>Testing keyboard accessibility:</p>
+            <ul>
+                <li>Verify logical tab order</li>
+                <li>Test skip navigation</li>
+                <li>Check focus indicators</li>
+                <li>Ensure no keyboard traps</li>
+            </ul>
+        </article>
+    </div>
+</section>
+</main>
+
+<!-- Footer remains the same -->
+
+        <footer role="contentinfo">
+            <p>&copy; 2024 Austin Emfield. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
