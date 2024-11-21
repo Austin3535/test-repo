@@ -445,16 +445,22 @@ struct PastWorkoutsView: View {
     }
 
     private func workoutRow(_ workout: Workout) -> some View {
-        ForEach(workout.days) { day in
-            ForEach(day.exercises) { exercise in
-                if let previousSets = routine.previousSets[exercise.id] {
-                    ForEach(previousSets) { set in
-                        HStack {
-                            Text(workout.name)
-                            Spacer()
-                            Text(day.name)
-                            Spacer()
-                            Text("\(set.date, formatter: dateFormatter)")
+        VStack(alignment: .leading) {
+            Text(workout.name)
+                .font(.headline)
+            ForEach(workout.days) { day in
+                ForEach(day.exercises) { exercise in
+                    if let previousSets = routine.previousSets[exercise.id] {
+                        ForEach(previousSets) { set in
+                            HStack {
+                                Text(day.name)
+                                Spacer()
+                                Text("Weight: \(set.weight, specifier: "%.2f") lbs")
+                                Spacer()
+                                Text("Reps: \(set.reps)")
+                                Spacer()
+                                Text("\(set.date, formatter: dateFormatter)")
+                            }
                         }
                     }
                 }
@@ -481,25 +487,37 @@ struct PastWorkoutDetailView: View {
         List {
             ForEach(workout.days) { day in
                 Section(header: Text(day.name)) {
-                    ForEach(day.exercises) { exercise in
-                        VStack(alignment: .leading) {
-                            Text(exercise.name)
-                                .font(.headline)
-                            ForEach(exercise.sets) { set in
-                                HStack {
-                                    Text("Weight: \(set.weight, specifier: "%.2f") lbs")
-                                    Spacer()
-                                    Text("Reps: \(set.reps)")
-                                    Spacer()
-                                    Text("Date: \(set.date, formatter: dateFormatter)")
-                                }
-                            }
-                        }
-                    }
+                    exerciseList(for: day)
                 }
             }
         }
         .navigationTitle(workout.name)
+    }
+
+    private func exerciseList(for day: Day) -> some View {
+        ForEach(day.exercises) { exercise in
+            VStack(alignment: .leading) {
+                Text(exercise.name)
+                    .font(.headline)
+                setList(for: exercise)
+            }
+        }
+    }
+
+    private func setList(for exercise: Exercise) -> some View {
+        if let sets = routine.previousSets[exercise.id] {
+            ForEach(sets) { set in
+                HStack {
+                    Text("Weight: \(set.weight, specifier: "%.2f") lbs")
+                    Spacer()
+                    Text("Reps: \(set.reps)")
+                    Spacer()
+                    Text("Date: \(set.date, formatter: dateFormatter)")
+                }
+            }
+        } else {
+            Text("No sets recorded")
+        }
     }
 
     private var dateFormatter: DateFormatter {
