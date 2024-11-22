@@ -59,7 +59,7 @@
 
             <section class="impact">
                 <h2>Real-World Impact</h2>
-                <div class="statistics">
+                <div class="statistics flex-container"> <!-- Add this class -->
                     <h3>Why It Matters</h3>
                     <ul>
                         <li>61 million adults in the US live with a disability</li>
@@ -73,73 +73,74 @@
 
             <section class="user-experiences">
                 <h2>Creating Better Experiences For Everyone</h2>
+                <div class="grid-container">
+                    <div class="vision-related card">
+                        <h3>People with Visual Challenges</h3>
+                        <ul>
+                            <li>Blind users who rely on screen readers for navigation</li>
+                            <li>People with low vision who need text magnification</li>
+                            <li>Users with color blindness who struggle with color-dependent interfaces</li>
+                            <li>People with light sensitivity who need high contrast options</li>
+                            <li>Users with temporary vision issues due to medical procedures or injuries</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="physical-challenges card">
+                        <h3>People with Physical Limitations</h3>
+                        <ul>
+                            <li>Users with limited motor control who rely on keyboard navigation</li>
+                            <li>People using alternative input devices like mouth sticks or eye trackers</li>
+                            <li>Users with tremors who need larger click targets</li>
+                            <li>People with temporary injuries (broken arm, carpal tunnel) who can't use a mouse</li>
+                            <li>Users with arthritis who struggle with precise movements</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="age-related card">
+                        <h3>Age-Related Considerations</h3>
+                        <ul>
+                            <li>Older adults who need larger text and simpler navigation</li>
+                            <li>Senior users who prefer consistent, predictable layouts</li>
+                            <li>People with reduced dexterity due to aging</li>
+                            <li>Users who need more time to process information</li>
+                            <li>Those who struggle with complex technology interfaces</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="limited-access card">
+                        <h3>People with Limited Web Access</h3>
+                        <ul>
+                            <li>Users with slow internet connections who need lightweight pages</li>
+                            <li>People accessing sites through older devices or browsers</li>
+                            <li>Users in rural areas with unreliable connectivity</li>
+                            <li>Those who rely on mobile devices as their primary internet access</li>
+                            <li>People using public computers with limited software options</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="cognitive-needs card">
+                        <h3>Users with Cognitive Considerations</h3>
+                        <ul>
+                            <li>People with learning disabilities who need clear, simple instructions</li>
+                            <li>Users with ADHD who benefit from distraction-free designs</li>
+                            <li>Those with memory challenges who need consistent navigation</li>
+                            <li>Users who require additional time to complete forms</li>
+                            <li>People who need content in multiple formats (text, audio, visual)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="situational card">
+                        <h3>Situational Limitations</h3>
+                        <ul>
+                            <li>Commuters using devices in bright sunlight</li>
+                            <li>People in noisy environments who can't hear audio</li>
+                            <li>Users multitasking while browsing</li>
+                            <li>Those accessing content in public spaces</li>
+                            <li>People using devices with one hand while carrying items</li>
+                        </ul>
+                    </div>
+                </div>
                 
-                <div class="vision-related">
-                    <h3>People with Visual Challenges</h3>
-                    <ul>
-                        <li>Blind users who rely on screen readers for navigation</li>
-                        <li>People with low vision who need text magnification</li>
-                        <li>Users with color blindness who struggle with color-dependent interfaces</li>
-                        <li>People with light sensitivity who need high contrast options</li>
-                        <li>Users with temporary vision issues due to medical procedures or injuries</li>
-                    </ul>
-                </div>
-            
-                <div class="physical-challenges">
-                    <h3>People with Physical Limitations</h3>
-                    <ul>
-                        <li>Users with limited motor control who rely on keyboard navigation</li>
-                        <li>People using alternative input devices like mouth sticks or eye trackers</li>
-                        <li>Users with tremors who need larger click targets</li>
-                        <li>People with temporary injuries (broken arm, carpal tunnel) who can't use a mouse</li>
-                        <li>Users with arthritis who struggle with precise movements</li>
-                    </ul>
-                </div>
-            
-                <div class="age-related">
-                    <h3>Age-Related Considerations</h3>
-                    <ul>
-                        <li>Older adults who need larger text and simpler navigation</li>
-                        <li>Senior users who prefer consistent, predictable layouts</li>
-                        <li>People with reduced dexterity due to aging</li>
-                        <li>Users who need more time to process information</li>
-                        <li>Those who struggle with complex technology interfaces</li>
-                    </ul>
-                </div>
-            
-                <div class="limited-access">
-                    <h3>People with Limited Web Access</h3>
-                    <ul>
-                        <li>Users with slow internet connections who need lightweight pages</li>
-                        <li>People accessing sites through older devices or browsers</li>
-                        <li>Users in rural areas with unreliable connectivity</li>
-                        <li>Those who rely on mobile devices as their primary internet access</li>
-                        <li>People using public computers with limited software options</li>
-                    </ul>
-                </div>
-            
-                <div class="cognitive-needs">
-                    <h3>Users with Cognitive Considerations</h3>
-                    <ul>
-                        <li>People with learning disabilities who need clear, simple instructions</li>
-                        <li>Users with ADHD who benefit from distraction-free designs</li>
-                        <li>Those with memory challenges who need consistent navigation</li>
-                        <li>Users who require additional time to complete forms</li>
-                        <li>People who need content in multiple formats (text, audio, visual)</li>
-                    </ul>
-                </div>
-            
-                <div class="situational">
-                    <h3>Situational Limitations</h3>
-                    <ul>
-                        <li>Commuters using devices in bright sunlight</li>
-                        <li>People in noisy environments who can't hear audio</li>
-                        <li>Users multitasking while browsing</li>
-                        <li>Those accessing content in public spaces</li>
-                        <li>People using devices with one hand while carrying items</li>
-                    </ul>
-                </div>
-            
                 <p class="impact-statement">By designing for these diverse needs, we create websites that are more usable, accessible, and enjoyable for everyone. Universal design isn't about accommodating a specific group—it's about recognizing and embracing human diversity in all its forms.</p>
             </section>
 
@@ -185,21 +186,24 @@
 
             <section class="legal-framework">
                 <h2>Legal Framework and Evolution</h2>
-                <div class="timeline">
-                    <h3>Key Milestones</h3>
-                    <ul>
-                        <li><strong>1918:</strong> Soldier's Rehabilitation Act - First step toward disability rights</li>
-                        <li><strong>1990:</strong> Americans with Disabilities Act (ADA) - Landmark legislation</li>
-                        <li><strong>2018:</strong> Section 508 Refresh - Updated technical standards</li>
-                    </ul>
-                </div>
-                <div class="current-standards">
-                    <h3>Current Requirements</h3>
-                    <ul>
-                        <li>Section 508 compliance for federal websites</li>
-                        <li>WCAG 2.0 Level A and AA requirements</li>
-                        <li>ADA Title III for public accommodations</li>
-                    </ul>
+                <div class="flex-container">
+                    <div class="timeline card">
+                        <h3>Key Milestones</h3>
+                        <ul>
+                            <li><strong>1918:</strong> Soldier's Rehabilitation Act - First step toward disability rights</li>
+                            <li><strong>1990:</strong> Americans with Disabilities Act (ADA) - Landmark legislation</li>
+                            <li><strong>2018:</strong> Section 508 Refresh - Updated technical standards</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="current-standards card">
+                        <h3>Current Requirements</h3>
+                        <ul>
+                            <li>Section 508 compliance for federal websites</li>
+                            <li>WCAG 2.0 Level A and AA requirements</li>
+                            <li>ADA Title III for public accommodations</li>
+                        </ul>
+                    </div>
                 </div>
             </section>
 
