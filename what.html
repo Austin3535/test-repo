@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What is Universal Design - Educational Guide</title>
-    <link rel="stylesheet" href="finalstyles2.css">
+    <link rel="stylesheet" href="launch2.css">
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -13,6 +12,7 @@
         <header role="banner">
             <h1>What is Universal Design?</h1>
             <nav role="navigation" aria-label="Main navigation">
+                <h2 class="sr-only">Main Navigation</h2>
                 <ul>
                     <li><a href="final.html">Home</a></li>
                     <li><a href="why.html">Why Universal Design</a></li>
@@ -22,10 +22,8 @@
             </nav>
         </header>
 
-<!-- Previous header content remains the same -->
 
 <main id="main-content" role="main">
-    <!-- Add this Table of Contents section -->
 <nav class="toc" aria-labelledby="toc-heading">
     <h2 id="toc-heading">Quick Navigation</h2>
     <ul>
@@ -35,7 +33,35 @@
         <li><a href="#testing">Testing Methodology</a></li>
     </ul>
 </nav>
-    <section class="design-concepts">
+
+<section class="interactive-demo" aria-labelledby="demo-heading">
+    <h2 id="demo-heading">Interactive Examples</h2>
+    <div class="demo-container">
+        <!-- Font Size Adjuster -->
+        <div class="demo-card">
+            <h3>Text Size Adjuster</h3>
+            <button class="size-button" data-size="decrease">A-</button>
+            <button class="size-button" data-size="reset">Reset</button>
+            <button class="size-button" data-size="increase">A+</button>
+            <p class="demo-text">Try adjusting this text size!</p>
+        </div>
+
+        <!-- Contrast Demo -->
+        <div class="demo-card">
+            <h3>Contrast Example</h3>
+            <div class="contrast-demo">
+                <div class="good-contrast">
+                    <p>Good Contrast Example</p>
+                </div>
+                <div class="poor-contrast">
+                    <p>Poor Contrast Example</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="design-concepts" class="design-concepts">
         <h2>Norman's Design Concepts in Detail</h2>
         <div class="card-container">
             <article class="card">
@@ -99,7 +125,7 @@
 
 <!-- Norman's Design Concepts section remains the same -->
 
-<section class="typography">
+<section id="typography" class="typography">
     <h2>Typography Best Practices</h2>
     <div class="card-container">
         <article class="card">
@@ -148,7 +174,7 @@
     </div>
 </section>
 
-<section class="color-design">
+<section id="color-design" class="color-design">
     <h2>Color Design Requirements</h2>
     <div class="card-container">
         <article class="card">
@@ -197,7 +223,7 @@
     </div>
 </section>
 
-<section class="testing">
+<section id="testing" class="testing">
     <h2>Testing Methodology</h2>
     <div class="card-container">
         <article class="card">
@@ -271,9 +297,29 @@
 
 <!-- Footer remains the same -->
 
-        <footer role="contentinfo">
-            <p>&copy; 2024 Austin Emfield. All rights reserved.</p>
-        </footer>
-    </div>
+
+
+<!-- Add the JavaScript here, right before </body> -->
+<script>
+// Font size adjuster
+document.querySelectorAll('.size-button').forEach(button => {
+    button.addEventListener('click', (e) => {
+        const demoText = document.querySelector('.demo-text');
+        const currentSize = parseInt(window.getComputedStyle(demoText).fontSize);
+        
+        switch(e.target.dataset.size) {
+            case 'increase':
+                demoText.style.fontSize = (currentSize + 2) + 'px';
+                break;
+            case 'decrease':
+                demoText.style.fontSize = (currentSize - 2) + 'px';
+                break;
+            case 'reset':
+                demoText.style.fontSize = '16px';
+                break;
+        }
+    });
+});
+</script>
 </body>
 </html>
