@@ -421,6 +421,19 @@ footer {
     }
 }
 
+/* Add this to your launch2.css file */
+.good-contrast {
+    background-color: #000000; /* Black background */
+    color: #FFFFFF; /* White text */
+    padding: 10px;
+}
+
+.poor-contrast {
+    background-color: #CCCCCC; /* Light gray background */
+    color: #8a8413; /* Dark gray text */
+    padding: 10px;
+}
+
 /* Responsive image layout */
 .responsive-img {
     max-width: 100%;
